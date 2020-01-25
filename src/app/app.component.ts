@@ -13,7 +13,7 @@ export class AppComponent {
 
   frutas = [
     { fruta: 'banana', state: false},
-    { fruta: 'maca', state: false},
-    { fruta: 'pera', state: false}
+    { fruta: 'jaboticaba', state: false},
+    { fruta: 'melancia', state: false}
   ];
 }
