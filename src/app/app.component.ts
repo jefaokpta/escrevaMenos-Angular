@@ -2,20 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  template: `
+    <ul>
+      <li *ngFor="let f of frutas" (click)="f.state=!f.state" [class.highlighted]="f.state" > {{f.fruta}} </li>
+    </ul>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-javacropt';
 
-  frutas =
-    [
-      { fruta: 'banana', state: false},
-      { fruta: 'maca', state: false},
-      { fruta: 'pera', state: false}
-    ];
-
-  click(fruta) {
-    fruta.state = !fruta.state;
-  }
+  frutas = [
+    { fruta: 'banana', state: false},
+    { fruta: 'maca', state: false},
+    { fruta: 'pera', state: false}
+  ];
 }
